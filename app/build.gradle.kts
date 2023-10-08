@@ -4,7 +4,7 @@ plugins {
     id ("kotlin-android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
-
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -104,6 +104,22 @@ dependencies {
     implementation("androidx.paging:paging-runtime-ktx:$pagingVersion")
     testImplementation("androidx.paging:paging-common-ktx:$pagingVersion")
     implementation("androidx.paging:paging-compose:3.3.0-alpha02")
+
+    //Room
+    val roomVersion = "2.5.2"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    // Test helpers
+    testImplementation("androidx.room:room-testing:$roomVersion")
+
+    // Paging 3 Integration
+    implementation("androidx.room:room-paging:$roomVersion")
 
 }
 
