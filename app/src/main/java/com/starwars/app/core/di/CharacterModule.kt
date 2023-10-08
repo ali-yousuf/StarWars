@@ -5,6 +5,7 @@ import com.starwars.app.character.data.datasource.remote.CharacterRemoteDataSour
 import com.starwars.app.character.data.repository.CharacterRepositoryImpl
 import com.starwars.app.character.domain.repository.CharacterRepository
 import com.starwars.app.character.domain.usecase.GetCharactersUseCase
+import com.starwars.app.core.db.StarWarsDatabase
 import com.starwars.app.core.network.StarWarsApi
 import dagger.Module
 import dagger.Provides
@@ -26,9 +27,10 @@ object CharacterModule {
     @Singleton
     @Provides
     fun providesCharacterRepository(
-        characterRemoteDataSource: CharacterRemoteDataSource
+        characterRemoteDataSource: CharacterRemoteDataSource,
+        starWarsDatabase: StarWarsDatabase
     ): CharacterRepository {
-        return CharacterRepositoryImpl(characterRemoteDataSource)
+        return CharacterRepositoryImpl(characterRemoteDataSource, starWarsDatabase)
     }
 
     @Singleton

@@ -26,19 +26,19 @@ fun CharacterItem(character: Character){
         ) {
             Column {
                 Text(
-                    text = character.name,
+                    text = character.name!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = character.birthYear,
+                    text = character.birthYear!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = character.gender,
+                    text = character.gender!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
