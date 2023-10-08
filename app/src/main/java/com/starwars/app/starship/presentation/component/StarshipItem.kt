@@ -1,4 +1,4 @@
-package com.starwars.app.character.presentation.component
+package com.starwars.app.starship.presentation.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,10 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.starwars.app.character.domain.entity.Character
+import com.starwars.app.starship.domain.entity.Starship
 
 @Composable
-fun CharacterItem(character: Character){
+fun StarshipItem(starship: Starship){
     Box(modifier = Modifier.padding(top = 8.dp)) {
         Card(
             colors = CardDefaults.cardColors(
@@ -26,19 +26,19 @@ fun CharacterItem(character: Character){
         ) {
             Column {
                 Text(
-                    text = character.name!!,
+                    text = starship.name!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = character.birthYear!!,
+                    text = starship.starshipClass!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = character.gender!!,
+                    text = starship.passengers!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,

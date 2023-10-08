@@ -11,6 +11,6 @@ class GetCharactersUseCase @Inject constructor(
     private val repository: CharacterRepository
 ) : BaseUseCase<Unit, Flow<PagingData<Character>>> {
     override suspend fun execute(input: Unit): Flow<PagingData<Character>> {
-        return repository.getCharacters();
+        return repository.getCharacters()
     }
 }
