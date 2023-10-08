@@ -22,7 +22,7 @@ class CharacterPagingSource (
             LoadResult.Page(
                 data = characters.results.mapFromListModel(),
                 prevKey = if (currentPage == 1) null else currentPage - 1,
-                nextKey = if (characters.results.isEmpty()) null else characters.count + 1
+                nextKey = if (characters.results.isEmpty()) null else currentPage + 1
             )
         } catch (exception: IOException) {
             return LoadResult.Error(exception)
