@@ -17,10 +17,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.starwars.app.character.presentation.CharacterScreen
+import com.starwars.app.planet.presentation.PlanetsScreen
 import com.starwars.app.starship.presentation.StarshipScreen
 import kotlinx.coroutines.launch
 
@@ -74,7 +73,7 @@ fun TabBar(
             when (page) {
                 0 -> CharacterScreen(navController = navController)
                 1 -> StarshipScreen(navController = navController)
-                2 -> TabContent("Tab 3 Content")
+                2 -> PlanetsScreen(navController = navController)
                 else -> TabContent("Unknown Tab Content")
             }
         }

@@ -1,6 +1,7 @@
 package com.starwars.app.core.network
 
 import com.starwars.app.character.data.model.dto.CharacterDto
+import com.starwars.app.planet.data.model.dto.PlanetDto
 import com.starwars.app.starship.data.model.dto.StarshipDto
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,4 +13,7 @@ interface StarWarsApi {
 
     @GET("starships/")
     suspend fun getStarship(@Query("page") page: Int): StarshipDto
+
+    @GET("planets/")
+    suspend fun getPlanet(@Query("page") page: Int): PlanetDto
 }
