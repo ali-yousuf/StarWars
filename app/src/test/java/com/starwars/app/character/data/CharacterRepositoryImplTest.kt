@@ -3,7 +3,7 @@ package com.starwars.app.character.data
 import androidx.paging.PagingData
 import androidx.paging.PagingSource
 import com.starwars.app.character.data.datasource.remote.CharacterRemoteDataSource
-import com.starwars.app.character.data.datasource.local.db.CharacterDao
+import com.starwars.app.character.data.datasource.local.CharacterDao
 import com.starwars.app.character.data.repository.CharacterRepositoryImpl
 import com.starwars.app.character.domain.entity.Character
 import com.starwars.app.core.db.StarWarsDatabase

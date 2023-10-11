@@ -1,4 +1,4 @@
-package com.starwars.app.ui.theme
+package com.starwars.app.util.theme
 
 import android.app.Activity
 import android.os.Build

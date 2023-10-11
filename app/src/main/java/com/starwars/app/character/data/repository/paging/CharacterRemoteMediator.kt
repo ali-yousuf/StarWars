@@ -5,7 +5,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import com.starwars.app.character.data.datasource.local.db.CharacterRemoteKeys
+import com.starwars.app.character.data.datasource.local.CharacterRemoteKeys
 import com.starwars.app.character.data.datasource.remote.CharacterRemoteDataSource
 import com.starwars.app.character.data.model.maper.mapFromListModel
 import com.starwars.app.character.domain.entity.Character

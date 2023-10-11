@@ -1,4 +1,4 @@
-package com.starwars.app.character.data.datasource.local.db
+package com.starwars.app.character.data.datasource.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
